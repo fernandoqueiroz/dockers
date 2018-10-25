@@ -1,0 +1,17 @@
+version: '2'
+services:
+  webserver:
+    container_name: php
+    image: lavoweb/php-5.6-ioncube
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - "TZ=America/Sao_Paulo" # offset GMT +03:00
+    volumes:
+      - ./www:/var/www/html
+        #- /etc/letsencrypt/live/cliente.goldhost.com.br/fullchain.pem:/etc/ssl/certs/ssl-cert-snakeoil.pem
+        #- /etc/letsencrypt/live/cliente.goldhost.com.br/privkey.pem:/etc/ssl/private/ssl-cert-snakeoil.key
+        # - cron:/etc/crontabs/root
+volumes:
+  data:

@@ -1,0 +1,13 @@
+<dataConfig>
+  <dataSource type="JdbcDataSource" driver="com.mysql.jdbc.Driver" 
+	url="jdbc:mysql://172.18.0.1/B2C" user="root" password="123456"/>
+  <document>
+    <entity name="PRODUTO" query="select ID, NOME, REF, BUSCA, ID_LOJA, URL_IMAGEM_WEB FROM PRODUTO">
+	<field column="ID" name="id" indexed="true" stored="true" required="true"/>
+	<field column="NOME" name="nome" indexed="true" stored="true" required="true"/>
+	<field column="REF" name="ref" indexed="true" stored="true" required="true"/>
+	<field column="BUSCA" name="ref" indexed="true" stored="true" required="true"/>
+	<field column="ID_LOJA" name="idLoja" indexed="true" stored="true" required="true"/>
+    </entity>
+  </document>
+</dataConfig>

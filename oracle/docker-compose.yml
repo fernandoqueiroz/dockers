@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db:
+    container_name: oradb
+    image: oracle/database:11.2.0.2-xe
+    ports:
+      - 1521:1521
+      - 8085:8080
+    shm_size: 1g
+    volumes:
+      - ./data:/u01/app/oracle/oradata
+    environment:
+      - ORACLE_PWD=fernandoudi
+    restart: unless-stopped  
+volumes:
+  data: 

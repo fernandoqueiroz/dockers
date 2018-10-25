@@ -1,0 +1,15 @@
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'git.lojistaonline.com.br'
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://git.lojistaonline.com.br'
+  ports:
+    - '80:80'
+    - '443:443'
+    - '22:22'
+  volumes:
+    - '/git/config:/etc/gitlab'
+    - '/git/logs:/var/log/gitlab'
+    - '/git/data:/var/opt/gitlab'
