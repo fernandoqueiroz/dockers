@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.8
 MAINTAINER Fernando Queiroz Fonseca <fernando.fonseca@sankhya.com.br>
 
 # Expose Web Port
