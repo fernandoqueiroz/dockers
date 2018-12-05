@@ -2,15 +2,16 @@ version: '2'
 services:
   db:
     container_name: sqlserver
-    image: microsoft/mssql-server-windows-express
+    image: microsoft/mssql-server-linux:latest
     ports:
       - 1433:1433
     shm_size: 1g
     volumes:
-      - ./data:/u01/app/oracle/oradata
+      - ./sqldata:/var/lib/sqldata
     environment:
-      - sa_password=123456
+      - SA_PASSWORD=Lojist@2017
       - ACCEPT_EULA=Y
+      - MSSQL_PID=Express
     restart: unless-stopped  
 volumes:
   data: 

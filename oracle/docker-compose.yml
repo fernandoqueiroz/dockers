@@ -10,7 +10,7 @@ services:
     volumes:
       - ./data:/u01/app/oracle/oradata
     environment:
-      - ORACLE_PWD=fernandoudi
+      - ORACLE_PWD=fernando
     restart: unless-stopped  
 volumes:
   data: 
