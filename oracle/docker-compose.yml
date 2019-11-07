@@ -2,15 +2,15 @@ version: '2'
 services:
   db:
     container_name: oradb
-    image: oracle/database:11.2.0.2-xe
+    image: oracle/database:19.3.0-ee
     ports:
       - 1521:1521
-      - 8085:8080
+      - 5500:5500
     shm_size: 1g
     volumes:
-      - ./data:/u01/app/oracle/oradata
+      - ./oradata:/opt/oracle/oradata
     environment:
-      - ORACLE_PWD=fernando
+      - ORACLE_PWD=Socialbank@2019
     restart: unless-stopped  
 volumes:
   data: 

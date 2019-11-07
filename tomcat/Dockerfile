@@ -25,8 +25,7 @@ RUN apk --update add openjdk8-jre &&\
     rm -f apache-tomcat-${TOMCAT_VERSION_FULL}.tar.gz apache-tomcat-${TOMCAT_VERSION_FULL}.tar.gz.md5 &&\
     ln -s /opt/apache-tomcat-${TOMCAT_VERSION_FULL} /opt/tomcat &&\
     rm -rf /opt/tomcat/webapps/examples /opt/tomcat/webapps/docs &&\
-    wget --quiet --no-cookies --no-check-certificate http://s1.lojistaonline.com.br/lojas/integracao/integracao.war && \
-    mv integracao.war /opt/tomcat/webapps && \
+    cp /home/fernando/workspace/socialbank/SB_CORP/api_sp/target/spapi#v1.war /opt/tomcat/webapps && \
     rm -rf /var/cache/apk/* && \
     apk del wget
 

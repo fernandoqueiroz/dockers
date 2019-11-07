@@ -9,9 +9,9 @@ services:
     volumes:
       - ./sqldata:/var/lib/sqldata
     environment:
-      - SA_PASSWORD=Lojist@2017
+      - SA_PASSWORD=Socialbank@2019
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Express
+      - MSSQL_PID=Developer
     restart: unless-stopped  
 volumes:
   data: 
