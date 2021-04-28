@@ -1,0 +1,14 @@
+version: '2'
+services:
+  webserver:
+    container_name: izpbx 
+    image: izdock/izpbx-asterisk
+    ports:
+      - 8888:80
+    environment:
+      - "MYSQL_ROOT_PASSWORD=123456"
+      - "MYSQL_PASSWORD=123456"
+      - "MYSQL_SERVER=172.17.0.1"
+      - "MYSQL_DATABASE=asterisk"
+      - "MYSQL_USER=root"
+      - "APP_DATA=/data"

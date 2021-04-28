@@ -1,0 +1,5 @@
+version: '2'
+services:
+  webserver:
+    container_name: cpanel 
+    image: mouse21/cpanel-docker 

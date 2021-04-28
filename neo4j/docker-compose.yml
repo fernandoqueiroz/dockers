@@ -1,0 +1,15 @@
+version: '2'
+services:
+  db:
+    container_name: neo4j
+    image: neo4j:latest
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./data:$HOME/neo4j/data
+    environment:
+      - NEO4J_AUTH=neo4j/fernando
+    restart: unless-stopped  
+volumes:
+  data: 

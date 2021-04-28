@@ -1,0 +1,9 @@
+version: '2'
+services:
+  worker:
+    container_name: redhat 
+    image: richxsl/rhel7
+    ports:
+      - "443:443"
+      - "2087:2087"
+

@@ -10,7 +10,7 @@ services:
     volumes:
       - ./oradata:/opt/oracle/oradata
     environment:
-      - ORACLE_PWD=Socialbank@2019
+      - ORACLE_PWD=Fernando@2021
     restart: unless-stopped  
 volumes:
   data: 

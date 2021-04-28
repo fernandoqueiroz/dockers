@@ -1,0 +1,11 @@
+version: '2'
+services:
+  webserver:
+    container_name: jetty
+    image: payments11:latest 
+    ports:
+     - "8083:8080"
+       #volumes:
+       #- ./api/target/spapi#v1.war:/var/lib/jetty/webapps/spapi#v1.war
+volumes:
+  data:
